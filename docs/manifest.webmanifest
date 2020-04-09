@@ -1,6 +1,6 @@
 {
-    "name": "vue-game-tic-tac-toe",
-    "short_name": "tic-tac-toe",
+    "name": "sample-app-pwa",
+    "short_name": "sample-app-pwa",
     "icons": [
       {
         "src": "./img/icons/android-chrome-192x192.png",
