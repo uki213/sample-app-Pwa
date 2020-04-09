@@ -1,14 +1,14 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b9e895505e3d5c31e79f",
-    "url": "/sample-app-Pwa/css/app.c6175a8e.css"
+    "revision": "ffb7b2bf486d35d9f56e2934f67425f4",
+    "url": "/sample-app-Pwa/camera-shutter1.mp3"
   },
   {
-    "revision": "82b9c7a5a3f405032b1db71a25f67021",
-    "url": "/sample-app-Pwa/img/logo.82b9c7a5.png"
+    "revision": "47cf401119ef56e11986",
+    "url": "/sample-app-Pwa/css/app.601d2ada.css"
   },
   {
-    "revision": "3af8c51aed2f8ca9512407e526be2479",
+    "revision": "c04ccc754c88ea916f1039848fc6131a",
     "url": "/sample-app-Pwa/index.html"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/js/about.ec5d2256.js"
   },
   {
-    "revision": "b9e895505e3d5c31e79f",
-    "url": "/sample-app-Pwa/js/app.6c0c6749.js"
+    "revision": "47cf401119ef56e11986",
+    "url": "/sample-app-Pwa/js/app.83f72d7d.js"
   },
   {
-    "revision": "267ee6c50163a6bc1793",
-    "url": "/sample-app-Pwa/js/chunk-vendors.608688aa.js"
+    "revision": "0ac5f8fb395f7650f971",
+    "url": "/sample-app-Pwa/js/chunk-vendors.33abea98.js"
   },
   {
     "revision": "9b3b4e23e0b999a95c3317979d83a669",
