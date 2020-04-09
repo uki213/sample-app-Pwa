@@ -1,8 +1,4 @@
 module.exports = {
-  publicPath: '/sample-app-Pwa/',
-  assetsDir: '',
+  publicPath: process.env.NODE_ENV === 'production' ? '/pwa-sample/' : '/',
   outputDir: 'docs',
-  devServer: {
-    host: 'localhost',
-  },
 };
