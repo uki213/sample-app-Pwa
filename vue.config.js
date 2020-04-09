@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: './',
+  publicPath: '/sample-app-Pwa/',
   assetsDir: '',
   outputDir: 'docs',
   devServer: {
