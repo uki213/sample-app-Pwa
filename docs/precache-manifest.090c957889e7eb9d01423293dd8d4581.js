@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "5a9c9cb798eeb21ddf88f7a83e4c7a55",
+    "revision": "3af8c51aed2f8ca9512407e526be2479",
     "url": "/sample-app-Pwa/index.html"
   },
   {
@@ -24,12 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/js/chunk-vendors.608688aa.js"
   },
   {
-    "revision": "cc6d40fa010a50c416b1eb2a286df54e",
+    "revision": "9b3b4e23e0b999a95c3317979d83a669",
     "url": "/sample-app-Pwa/manifest.json"
-  },
-  {
-    "revision": "f9aa0403de44dca9219ab092ca54bb33",
-    "url": "/sample-app-Pwa/manifest.webmanifest"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
