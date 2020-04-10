@@ -1,9 +1,5 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ffb7b2bf486d35d9f56e2934f67425f4",
-    "url": "/sample-app-Pwa/camera-shutter1.mp3"
-  },
-  {
     "revision": "becc3f6b7b82aa214250",
     "url": "/sample-app-Pwa/css/app.c304d4e3.css"
   },
@@ -72,7 +68,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/js/chunk-vendors.fadeb26a.js"
   },
   {
-    "revision": "1f22064272256b54b92d719e41706597",
+    "revision": "a6c62f7c090c1efa48f147621d74a248",
     "url": "/sample-app-Pwa/manifest.json"
   },
   {

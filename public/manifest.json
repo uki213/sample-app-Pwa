@@ -1,6 +1,6 @@
 {
   "name": "sample-app-pwa",
-  "short_name": "sample-app-pwa",
+  "short_name": "sap",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
