@@ -36,7 +36,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/img/ui/shutterMark.svg"
   },
   {
-    "revision": "ee802554c8d24c6f0d29d4386a7db2ab",
+    "revision": "e57e412455bc78d60acf3a03449797b0",
     "url": "/sample-app-Pwa/index.html"
   },
   {
@@ -72,7 +72,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/js/chunk-vendors.fadeb26a.js"
   },
   {
-    "revision": "45d5882e782c2119c45b1ad7dfbfa5b1",
+    "revision": "14d287f853a03f8217b4baaf4398c931",
     "url": "/sample-app-Pwa/manifest.json"
   },
   {

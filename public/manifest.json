@@ -1,6 +1,6 @@
 {
     "name": "HAIR SHOT CAMERA",
-    "short_name": "HAIR SHOT CAMERA",
+    "short_name": "HairShotCamera",
     "icons": [
       {
         "src": "./img/icons/app-icon-192.png",
@@ -40,6 +40,7 @@
     ],
     "start_url": "./index.html",
     "display": "standalone",
+    "orientation": "portrait",
     "background_color": "#FFFFFF",
     "theme_color": "#7cbfd8"
   }
