@@ -62,7 +62,7 @@ export default defineComponent({
         virtualCanvas.width,
         virtualCanvas.height
       )
-      const imageData = virtualCanvas.toDataURL('image/png')
+      const imageData = virtualCanvas.toDataURL('image/jpeg', 1.0)
       return imageData
     }
     return {
