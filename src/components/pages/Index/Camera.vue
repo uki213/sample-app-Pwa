@@ -7,71 +7,71 @@
 
 <template>
   <section>
-    <video
-      id="preview"
-      class="preview"
-      controls
-      autoplay
-    />
+    <div class="previewWrap">
+      <video
+        id="preview"
+        class="previewBuffer"
+        autoplay
+      />
+    </div>
     <div>
       <img
         src="img/ui/shutterMark.svg"
-        @click="resultImage()"
+        @click="$emit('click', resultImage())"
       >
     </div>
-    <img id="test">
   </section>
 </template>
 
 <script>
-import { defineComponent, onMounted } from '@vue/composition-api'
+import { defineComponent, onMounted, ref } from '@vue/composition-api'
 
 export default defineComponent({
   setup() {
-    const canvasSize = {
-      x: 320,
-      y: 320
-    }
-    const virtualCanvas = document.createElement('canvas')
-    virtualCanvas.width = canvasSize.x
-    virtualCanvas.height = canvasSize.y
-
-    let playerElement
+    let previewVideo
+    const previewBufferData = ref('')
 
     function handleSuccess(stream) {
-      playerElement.srcObject = stream
+      previewVideo.srcObject = stream
     }
 
     onMounted(() => {
-      playerElement = document.getElementById('preview')
+      previewVideo = document.getElementById('preview')
       navigator.mediaDevices
         .getUserMedia({
           video: {
-            frameRate: 15,
-            facingMode: { exact: 'environment' },
-            width: { min: 776, ideal: 720, max: 1080 },
-            height: { min: 776, ideal: 720, max: 1080 }
+            width: { min: 1024, ideal: 1280, max: 1920 },
+            height: { min: 776, ideal: 720, max: 1080 },
+            frameRate: 10,
+            facingMode: { exact: 'environment' }
           }
         })
         .then(handleSuccess)
     })
 
     function resultImage() {
+      const virtualCanvas = document.createElement('canvas')
+      virtualCanvas.width = previewVideo.videoWidth
+      virtualCanvas.height = previewVideo.videoWidth
+
       const context = virtualCanvas.getContext('2d')
       context.drawImage(
-        playerElement,
+        previewVideo,
         0,
         0,
-        virtualCanvas.width,
-        virtualCanvas.height
+        previewVideo.videoWidth,
+        previewVideo.videoHeight
       )
-      const imageData = virtualCanvas.toDataURL('image/jpeg', 0.95)
-
-      const aaa = document.getElementById('test')
-      aaa.src = imageData
+      const imageData = virtualCanvas.toDataURL('image/jpeg', 0.8)
       return imageData
     }
+
+    setInterval(() => {
+      previewBufferData.value = resultImage()
+    }, 50)
+
     return {
+      previewBufferData,
       resultImage
     }
   }
@@ -82,9 +82,19 @@ export default defineComponent({
 section {
   padding-top: 44px;
   text-align: center;
-  .preview {
+  .previewWrap {
+    margin: auto;
     width: 320px;
     height: 320px;
+    position: relative;
+    overflow: hidden;
+    .previewBuffer {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+    }
   }
 }
 </style>
