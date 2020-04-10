@@ -4,16 +4,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/camera-shutter1.mp3"
   },
   {
-    "revision": "9eac3eceeb04a3fd05ce",
+    "revision": "d8bed54b85ec56fb4b6d",
     "url": "/sample-app-Pwa/css/app.f34ca885.css"
-  },
-  {
-    "revision": "25c635b5a5eeac1c361f",
-    "url": "/sample-app-Pwa/css/chunk-03803562.54d493f1.css"
   },
   {
     "revision": "2b6ca85d78703877bb9c",
     "url": "/sample-app-Pwa/css/chunk-519450fa.bb5bfce8.css"
+  },
+  {
+    "revision": "1f024b9c54fd5cbe0765",
+    "url": "/sample-app-Pwa/css/chunk-780e0284.201c8f82.css"
   },
   {
     "revision": "0d6de98c328c9b08575e",
@@ -28,16 +28,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/img/ui/shutterMark.svg"
   },
   {
-    "revision": "efd12b2c9843edf563b44113a88e5418",
+    "revision": "f6b4415d6084af79844ca04a715d54a3",
     "url": "/sample-app-Pwa/index.html"
   },
   {
-    "revision": "9eac3eceeb04a3fd05ce",
-    "url": "/sample-app-Pwa/js/app.3ac8b76f.js"
-  },
-  {
-    "revision": "25c635b5a5eeac1c361f",
-    "url": "/sample-app-Pwa/js/chunk-03803562.20ed75ed.js"
+    "revision": "d8bed54b85ec56fb4b6d",
+    "url": "/sample-app-Pwa/js/app.b47ac0a0.js"
   },
   {
     "revision": "fdd9fcef13bff684414c",
@@ -48,8 +44,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/js/chunk-519450fa.0f36e77d.js"
   },
   {
-    "revision": "b51a48778ebb24e76aad",
-    "url": "/sample-app-Pwa/js/chunk-af082948.fe05fdb4.js"
+    "revision": "1f024b9c54fd5cbe0765",
+    "url": "/sample-app-Pwa/js/chunk-780e0284.55393527.js"
+  },
+  {
+    "revision": "65cdea6546ec766bface",
+    "url": "/sample-app-Pwa/js/chunk-af082948.808e15a5.js"
   },
   {
     "revision": "0d6de98c328c9b08575e",

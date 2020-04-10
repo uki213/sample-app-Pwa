@@ -35,6 +35,9 @@ export default defineComponent({
 
     function handleSuccess(stream) {
       playerElement.srcObject = stream
+      playerElement.onloadedmetadata = () => {
+        playerElement.play()
+      }
     }
 
     onMounted(() => {
@@ -52,7 +55,7 @@ export default defineComponent({
     })
 
     function resultImage() {
-      playerElement.stop()
+      playerElement.pause()
       const virtualCanvas = document.createElement('canvas')
       virtualCanvas.width = canvasSize.x
       virtualCanvas.height = canvasSize.y
