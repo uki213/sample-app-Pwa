@@ -28,16 +28,13 @@ import { defineComponent, onMounted } from '@vue/composition-api'
 export default defineComponent({
   setup() {
     const canvasSize = {
-      x: 1080,
-      y: 1080
+      x: 320,
+      y: 320
     }
     let playerElement
 
     function handleSuccess(stream) {
       playerElement.srcObject = stream
-      playerElement.onloadedmetadata = () => {
-        playerElement.play()
-      }
     }
 
     onMounted(() => {
@@ -55,7 +52,6 @@ export default defineComponent({
     })
 
     function resultImage() {
-      playerElement.pause()
       const virtualCanvas = document.createElement('canvas')
       virtualCanvas.width = canvasSize.x
       virtualCanvas.height = canvasSize.y
