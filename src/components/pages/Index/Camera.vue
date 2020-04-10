@@ -32,6 +32,10 @@ export default defineComponent({
       x: 320,
       y: 320
     }
+    const virtualCanvas = document.createElement('canvas')
+    virtualCanvas.width = canvasSize.x
+    virtualCanvas.height = canvasSize.y
+
     let playerElement
 
     function handleSuccess(stream) {
@@ -53,9 +57,6 @@ export default defineComponent({
     })
 
     function resultImage() {
-      const virtualCanvas = document.createElement('canvas')
-      virtualCanvas.width = canvasSize.x
-      virtualCanvas.height = canvasSize.y
       const context = virtualCanvas.getContext('2d')
       context.drawImage(
         playerElement,
