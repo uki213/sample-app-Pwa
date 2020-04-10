@@ -5,8 +5,8 @@
       @click="changeActiveTab($event)"
     />
     <Camera
-      v-show="activeTab === 'camera'"
-      @click="$router.push({ name:'ChooseFilter', params: getImage($event) })"
+      v-if="activeTab === 'camera'"
+      @click="getImage($event)"
     />
     <Gallery v-show="activeTab === 'gallery'" />
   </div>
@@ -14,6 +14,7 @@
 
 <script>
 import { defineComponent, ref } from '@vue/composition-api'
+import router from '@/router'
 
 export default defineComponent({
   components: {
@@ -28,12 +29,14 @@ export default defineComponent({
       changeActiveTab(selectedTab) {
         activeTab.value = selectedTab
       },
-      getImage(imageData) {
-        return {
-          imageData
-        }
+      async getImage(resultData) {
+        const imageData = await resultData
+        router.push({ name: 'ChooseFilter', params: { imageData } })
       }
     }
+
+    // ヒストリー消去
+    window.history.pushState(null, null, null)
 
     return {
       activeTab,

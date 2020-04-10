@@ -8,9 +8,12 @@
 html,body{
   padding: 0;
   margin: 0;
+  *{
+    outline: none;
+  }
 }
 #app{
-  padding: 40px 10px 0;
+  padding: 10px;
   font-size: 20px;
   color: #707070;
 }

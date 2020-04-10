@@ -15,6 +15,15 @@
       />
     </div>
     <div>
+      <audio
+        id="shuttersound"
+        preload="auto"
+      >
+        <source
+          src="media/shutter.mp3"
+          type="audio/mp3"
+        >
+      </audio>
       <img
         src="img/ui/shutterMark.svg"
         @click="$emit('click', resultImage())"
@@ -29,6 +38,7 @@ import { defineComponent, onMounted, ref } from '@vue/composition-api'
 export default defineComponent({
   setup() {
     let previewVideo
+    let shuttersound
     const previewBufferData = ref('')
 
     function handleSuccess(stream) {
@@ -36,20 +46,24 @@ export default defineComponent({
     }
 
     onMounted(() => {
+      shuttersound = document.getElementById('shuttersound')
       previewVideo = document.getElementById('preview')
       navigator.mediaDevices
         .getUserMedia({
           video: {
-            width: { min: 1024, ideal: 1280, max: 1920 },
-            height: { min: 776, ideal: 720, max: 1080 },
-            frameRate: 10,
+            width: { min: 1024, ideal: 1920, max: 3840 },
+            height: { min: 776, ideal: 1080, max: 2160 },
+            frameRate: 25,
             facingMode: { exact: 'environment' }
           }
         })
         .then(handleSuccess)
     })
 
-    function resultImage() {
+    async function resultImage() {
+      shuttersound.play() // シャッターサウンド
+      previewVideo.pause() // プレビューの一時停止
+
       const virtualCanvas = document.createElement('canvas')
       virtualCanvas.width = previewVideo.videoWidth
       virtualCanvas.height = previewVideo.videoWidth
@@ -62,13 +76,12 @@ export default defineComponent({
         previewVideo.videoWidth,
         previewVideo.videoHeight
       )
-      const imageData = virtualCanvas.toDataURL('image/jpeg', 0.8)
+
+      const imageData = virtualCanvas.toDataURL('image/jpeg', 0.95)
+      await new Promise((resolve) => setTimeout(resolve, 500))
+
       return imageData
     }
-
-    setInterval(() => {
-      previewBufferData.value = resultImage()
-    }, 50)
 
     return {
       previewBufferData,
@@ -83,9 +96,11 @@ section {
   padding-top: 44px;
   text-align: center;
   .previewWrap {
-    margin: auto;
+    margin: 0 auto 25px;
     width: 320px;
     height: 320px;
+    box-sizing: border-box;
+    border: 1px solid #707070;
     position: relative;
     overflow: hidden;
     .previewBuffer {

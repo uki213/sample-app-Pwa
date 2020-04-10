@@ -1,18 +1,26 @@
 <template>
   <section>
-    <img
-      id="resultImage"
-      class="image"
-      :src="resultImageData"
-    >
-    <div>
+    <HistryBack />
+    <div class="resultImageWrap">
+      <img
+        id="resultImage"
+        class="image"
+        :src="resultImageData"
+      >
+    </div>
+    <div class="filterSelect">
       <label>
-        画像フィルター
+        <span>画像フィルター</span>
         <input
           type="checkbox"
           @change="changeFilter"
         >
       </label>
+    </div>
+    <div class="buttonArea">
+      <button type="button">
+        登録
+      </button>
     </div>
   </section>
 </template>
@@ -22,6 +30,9 @@
 import { defineComponent, computed, ref } from '@vue/composition-api'
 
 export default defineComponent({
+  components: {
+    HistryBack: () => import('@/components/commons/HistoryBack.vue')
+  },
   props: {
     imageData: {
       type: String // Base64 Data
@@ -38,7 +49,8 @@ export default defineComponent({
         resultImageData.value = resultImage.src
       }
 
-      filterous.importImage(imageElement)
+      filterous
+        .importImage(imageElement)
         .applyInstaFilter(selectedFilter.value)
         .renderHtml(resultImage)
     }
@@ -53,7 +65,7 @@ export default defineComponent({
 
     function changeFilter(event) {
       const isCheaked = event.target.checked
-      selectedFilter.value = isCheaked ? 'willow' : 'normal'
+      selectedFilter.value = isCheaked ? '1977' : 'normal'
       init()
     }
 
@@ -68,8 +80,70 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.image{
+.resultImageWrap {
+  padding-top: 44px;
+  text-align: center;
+  margin-bottom: 45px;
+  .image {
+    width: 320px;
+    height: 320px;
+    vertical-align: bottom;
+    box-sizing: border-box;
+    border: 1px solid #707070;
+  }
+}
+.filterSelect {
   width: 320px;
-  height: 320px;
+  margin: 0 auto 45px;
+  label {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      border: 1px solid #7cbfd8;
+      width: 70px;
+      height: 40px;
+      border-radius: 40px;
+      position: relative;
+      &::after {
+        transition: all 500ms;
+        content: "";
+        display: block;
+        position: absolute;
+        box-sizing: border-box;
+        border: 1px solid #7cbfd8;
+        background:#fff;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        left: 1px;
+        top: 1px;
+      }
+      &:checked {
+        &::after {
+          background: #7cbfd8;
+          left: 30px;
+          top: 1px;
+        }
+      }
+    }
+  }
+}
+.buttonArea{
+  text-align: center;
+  button{
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      width: 140px;
+      height: 50px;
+      background: #7CBFD8;
+      color: #fff;
+      border: none;
+      font-size: 30px;
+      border-radius: 5px;
+  }
 }
 </style>
