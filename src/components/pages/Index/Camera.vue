@@ -16,9 +16,10 @@
     <div>
       <img
         src="img/ui/shutterMark.svg"
-        @click="$emit('click', resultImage())"
+        @click="resultImage()"
       >
     </div>
+    <img id="test">
   </section>
 </template>
 
@@ -64,6 +65,9 @@ export default defineComponent({
         virtualCanvas.height
       )
       const imageData = virtualCanvas.toDataURL('image/jpeg', 0.95)
+
+      const aaa = document.getElementById('test')
+      aaa.src = imageData
       return imageData
     }
     return {
