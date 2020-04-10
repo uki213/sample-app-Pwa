@@ -28,8 +28,8 @@ import { defineComponent, onMounted } from '@vue/composition-api'
 export default defineComponent({
   setup() {
     const canvasSize = {
-      x: 800,
-      y: 800
+      x: 1080,
+      y: 1080
     }
     let playerElement
 
@@ -42,6 +42,7 @@ export default defineComponent({
       navigator.mediaDevices
         .getUserMedia({
           video: {
+            frameRate: { ideal: 5, max: 15 },
             facingMode: { exact: 'environment' },
             width: canvasSize.x,
             height: canvasSize.y
