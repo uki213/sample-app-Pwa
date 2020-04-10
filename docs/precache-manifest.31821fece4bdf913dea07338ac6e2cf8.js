@@ -72,7 +72,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/js/chunk-vendors.fadeb26a.js"
   },
   {
-    "revision": "b530557409be8862c243227cc3da4cee",
+    "revision": "1f22064272256b54b92d719e41706597",
     "url": "/sample-app-Pwa/manifest.json"
   },
   {
