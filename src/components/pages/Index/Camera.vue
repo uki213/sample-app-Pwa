@@ -48,6 +48,9 @@ export default defineComponent({
     onMounted(() => {
       shuttersound = document.getElementById('shuttersound')
       previewVideo = document.getElementById('preview')
+
+      if (navigator.mediaDevices.ondevicechange === null) return
+
       navigator.mediaDevices
         .getUserMedia({
           video: {

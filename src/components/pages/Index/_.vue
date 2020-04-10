@@ -36,7 +36,7 @@ export default defineComponent({
     }
 
     // ヒストリー消去
-    window.history.pushState(null, null, null)
+    // window.history.pushState(null, null, null)
 
     return {
       activeTab,
