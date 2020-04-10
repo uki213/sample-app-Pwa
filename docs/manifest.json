@@ -1,1 +1,1 @@
-{"name":"HAIR SHOT CAMERA","short_name":"sample-app-pwa","theme_color":"#7cbfd8","icons":[{"src":"./img/icons/app-icon-192.png","sizes":"192x192","type":"image/png"}],"start_url":"./index.html","display":"standalone","background_color":"#FFFFFF","orientation":"portrait"}
+{"name":"sample-app-pwa","short_name":"sample-app-pwa","theme_color":"#7cbfd8","icons":[{"src":"./img/icons/app-icon-192.png","sizes":"192x192","type":"image/png"}],"start_url":"./index.html","display":"standalone","background_color":"#FFFFFF","orientation":"portrait"}
