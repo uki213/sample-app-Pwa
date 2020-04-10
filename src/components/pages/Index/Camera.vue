@@ -52,6 +52,7 @@ export default defineComponent({
     })
 
     function resultImage() {
+      playerElement.stop()
       const virtualCanvas = document.createElement('canvas')
       virtualCanvas.width = canvasSize.x
       virtualCanvas.height = canvasSize.y
@@ -63,7 +64,7 @@ export default defineComponent({
         virtualCanvas.width,
         virtualCanvas.height
       )
-      const imageData = virtualCanvas.toDataURL('image/jpeg', 0.8)
+      const imageData = virtualCanvas.toDataURL('image/jpeg', 0.95)
       return imageData
     }
     return {
