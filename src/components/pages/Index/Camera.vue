@@ -42,10 +42,10 @@ export default defineComponent({
       navigator.mediaDevices
         .getUserMedia({
           video: {
-            frameRate: { ideal: 5, max: 15 },
+            frameRate: 15,
             facingMode: { exact: 'environment' },
-            width: canvasSize.x,
-            height: canvasSize.y
+            width: { min: 776, ideal: 720, max: 1080 },
+            height: { min: 776, ideal: 720, max: 1080 }
           }
         })
         .then(handleSuccess)
@@ -63,7 +63,7 @@ export default defineComponent({
         virtualCanvas.width,
         virtualCanvas.height
       )
-      const imageData = virtualCanvas.toDataURL('image/jpeg', 1.0)
+      const imageData = virtualCanvas.toDataURL('image/jpeg', 0.8)
       return imageData
     }
     return {
