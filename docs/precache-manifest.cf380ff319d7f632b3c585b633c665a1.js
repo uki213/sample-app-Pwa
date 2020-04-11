@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cc4b9b17624b0a47cdbf",
+    "revision": "9e03d32e5a0ce1abc326",
     "url": "/sample-app-Pwa/css/app.c304d4e3.css"
   },
   {
@@ -28,12 +28,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/img/ui/shutterMark.svg"
   },
   {
-    "revision": "8d5670d2f4b544ae7551c2204e4c660c",
+    "revision": "8ae6727711632b400fa3cc1472a07bb1",
     "url": "/sample-app-Pwa/index.html"
   },
   {
-    "revision": "cc4b9b17624b0a47cdbf",
-    "url": "/sample-app-Pwa/js/app.ecdf555e.js"
+    "revision": "9e03d32e5a0ce1abc326",
+    "url": "/sample-app-Pwa/js/app.7880fb13.js"
   },
   {
     "revision": "f7eb6c721e741f375f55",
@@ -60,8 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/js/chunk-92bb340e.b2b7bfab.js"
   },
   {
-    "revision": "ee1403fdd95d62598209",
-    "url": "/sample-app-Pwa/js/chunk-vendors.38c5d8de.js"
+    "revision": "9495c69b453c2c2f73fe",
+    "url": "/sample-app-Pwa/js/chunk-vendors.6b4d5a27.js"
   },
   {
     "revision": "cc6d40fa010a50c416b1eb2a286df54e",
