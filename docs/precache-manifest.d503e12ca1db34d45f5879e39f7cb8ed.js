@@ -28,7 +28,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/img/ui/shutterMark.svg"
   },
   {
-    "revision": "b29bcdc8d5387fcfb1d2b3e00b4cfaed",
+    "revision": "8d5670d2f4b544ae7551c2204e4c660c",
     "url": "/sample-app-Pwa/index.html"
   },
   {
