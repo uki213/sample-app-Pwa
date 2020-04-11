@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "becc3f6b7b82aa214250",
+    "revision": "cc4b9b17624b0a47cdbf",
     "url": "/sample-app-Pwa/css/app.c304d4e3.css"
   },
   {
@@ -16,12 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/css/chunk-519450fa.bb5bfce8.css"
   },
   {
-    "revision": "1eaa74cc2d7f259a9138",
-    "url": "/sample-app-Pwa/css/chunk-c5e68022.3a5f1f05.css"
-  },
-  {
-    "revision": "d2f3db8010961886eb7cb7be0fb7d440",
-    "url": "/sample-app-Pwa/filterous2-2.0.0.min.js"
+    "revision": "95ccc8c44fa007852fec",
+    "url": "/sample-app-Pwa/css/chunk-92bb340e.9714b3fc.css"
   },
   {
     "revision": "0f8ced4b1328cd4dfbed53734708f329",
@@ -32,16 +28,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/img/ui/shutterMark.svg"
   },
   {
-    "revision": "e47b32c85c3175d8506b764ea39828d2",
+    "revision": "c620152a1fcc50e694e0ecd37b87759b",
     "url": "/sample-app-Pwa/index.html"
   },
   {
-    "revision": "becc3f6b7b82aa214250",
-    "url": "/sample-app-Pwa/js/app.9dfb520c.js"
+    "revision": "cc4b9b17624b0a47cdbf",
+    "url": "/sample-app-Pwa/js/app.ecdf555e.js"
   },
   {
-    "revision": "afcdb75141c45c5f1f33",
-    "url": "/sample-app-Pwa/js/chunk-23d5b341.70b0bfe2.js"
+    "revision": "f7eb6c721e741f375f55",
+    "url": "/sample-app-Pwa/js/chunk-23d5b341.e2c8a71f.js"
   },
   {
     "revision": "4dd3cbc921872dc3389c",
@@ -60,12 +56,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sample-app-Pwa/js/chunk-519450fa.0f36e77d.js"
   },
   {
-    "revision": "1eaa74cc2d7f259a9138",
-    "url": "/sample-app-Pwa/js/chunk-c5e68022.fdff4ddd.js"
+    "revision": "95ccc8c44fa007852fec",
+    "url": "/sample-app-Pwa/js/chunk-92bb340e.b2b7bfab.js"
   },
   {
-    "revision": "6185c1c726f5ab4ccd4f",
-    "url": "/sample-app-Pwa/js/chunk-vendors.fadeb26a.js"
+    "revision": "ee1403fdd95d62598209",
+    "url": "/sample-app-Pwa/js/chunk-vendors.38c5d8de.js"
   },
   {
     "revision": "9a8117fe44f1c2263e6a0273a56f3cc9",

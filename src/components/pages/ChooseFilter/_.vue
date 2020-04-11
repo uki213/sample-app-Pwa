@@ -26,8 +26,8 @@
 </template>
 
 <script>
-/* global filterous:writable */
 import { defineComponent, computed, ref } from '@vue/composition-api'
+import filterous from './filterous2-2.0.0.min'
 
 export default defineComponent({
   components: {
