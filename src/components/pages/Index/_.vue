@@ -2,13 +2,14 @@
   <div>
     <Tab
       :active-tab="activeTab"
+      :route="$route"
       @click="changeActiveTab($event)"
     />
     <Camera
       v-if="activeTab === 'camera'"
       @click="getImage($event)"
     />
-    <Gallery v-show="activeTab === 'gallery'" />
+    <Gallery v-if="activeTab === 'gallery'" />
   </div>
 </template>
 
@@ -17,12 +18,29 @@ import { defineComponent, ref } from '@vue/composition-api'
 import router from '@/router'
 
 export default defineComponent({
+  props: {
+    isGalleryMode: {
+      type: Boolean,
+      default: false
+    }
+  },
   components: {
     Tab: () => import('./Tab.vue'),
     Camera: () => import('./Camera.vue'),
     Gallery: () => import('./Gallery.vue')
   },
-  setup() {
+  // 特定ページからの戻りはgalleryを表示する
+  beforeRouteEnter(to, from, next) {
+    const checkList = ['GalleryPreview']
+    const returnPageName = from.name
+
+    next((vm) => {
+      if (checkList.includes(returnPageName)) {
+        vm.activeTab = 'gallery'
+      }
+    })
+  },
+  setup(props) {
     const activeTab = ref('camera')
 
     const methods = {
@@ -35,8 +53,10 @@ export default defineComponent({
       }
     }
 
-    // ヒストリー消去
-    // window.history.pushState(null, null, null)
+    // routerでGalleryを指定してきた場合にgalleryを表示する
+    if (props.isGalleryMode) {
+      activeTab.value = 'gallery'
+    }
 
     return {
       activeTab,
@@ -45,6 +65,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style>
-</style>

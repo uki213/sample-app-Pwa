@@ -6,6 +6,7 @@
 
 <style lang="scss">
 html,body{
+  overscroll-behavior-y: none;
   padding: 0;
   margin: 0;
   *{

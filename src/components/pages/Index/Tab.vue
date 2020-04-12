@@ -33,18 +33,20 @@ export default defineComponent({
   border-bottom: 1px solid #707070;
   .item{
     border: 1px solid #707070;
-    border-bottom: 0;
+    border-bottom: 1px solid;
     border-radius: 5px 5px 0 0;
     width: 150px;
-    height: 51px;
+    height: 52px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 5px;
+    margin-bottom: -1px;
     box-sizing: border-box;
     background: #E1F3F9;
     &.active{
       background: #fff;
+      border-bottom: 1px solid #fff;
     }
   }
 }

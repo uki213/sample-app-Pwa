@@ -18,7 +18,10 @@
       </label>
     </div>
     <div class="buttonArea">
-      <button type="button">
+      <button
+        type="button"
+        @click="submit()"
+      >
         登録
       </button>
     </div>
@@ -27,6 +30,8 @@
 
 <script>
 import { defineComponent, computed, ref } from '@vue/composition-api'
+import axios from 'axios'
+import router from '@/router/'
 import filterous from './filterous2-2.0.0.min'
 
 export default defineComponent({
@@ -69,9 +74,19 @@ export default defineComponent({
       init()
     }
 
+    function submit() {
+      axios.get('./api/upload.json').then(() => {
+        console.log({
+          sendData: resultImageData.value
+        })
+        router.replace({ name: 'Top', params: { isGalleryMode: true } })
+      })
+    }
+
     init()
 
     return {
+      submit,
       changeFilter,
       resultImageData
     }
@@ -85,8 +100,8 @@ export default defineComponent({
   text-align: center;
   margin-bottom: 45px;
   .image {
-    width: 320px;
-    height: 320px;
+    width: calc(100vw - 20px);
+    height: calc(100vw - 20px);
     vertical-align: bottom;
     box-sizing: border-box;
     border: 1px solid #707070;
@@ -134,6 +149,7 @@ export default defineComponent({
 }
 .buttonArea{
   text-align: center;
+  margin-bottom: 20px;
   button{
       -moz-appearance: none;
       -webkit-appearance: none;

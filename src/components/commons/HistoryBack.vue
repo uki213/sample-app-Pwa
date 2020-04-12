@@ -14,6 +14,7 @@
   img{
     position: relative;
     top: 10px;
+    height: 30px;
   }
 }
 </style>

@@ -100,8 +100,8 @@ section {
   text-align: center;
   .previewWrap {
     margin: 0 auto 25px;
-    width: 320px;
-    height: 320px;
+    width: calc(100vw - 20px);
+    height: calc(100vw - 20px);
     box-sizing: border-box;
     border: 1px solid #707070;
     position: relative;
